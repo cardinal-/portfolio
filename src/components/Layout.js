@@ -1,9 +1,17 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
+import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {
   return (
     <>
+      <Helmet>
+        <link
+          href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Rubik&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
+
       <Global
         styles={css`
           *,
@@ -21,7 +29,16 @@ const Layout = ({ children }) => {
             margin: 0;
             background-color: aqua;
             line-height: 1.6;
-            font-family: "Helvetica", sans-serif;
+            font-family: "Rubik", sans-serif;
+          }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-family: "Playfair Display", serif;
+            font-weight: 900;
           }
         `}
       />
