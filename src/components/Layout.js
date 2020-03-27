@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
           }
           body {
             margin: 0;
-            background-color: aqua;
+            background-color: #a3a3a3;
             line-height: 1.6;
             font-family: "Rubik", sans-serif;
           }
@@ -39,12 +39,17 @@ const Layout = ({ children }) => {
           h6 {
             font-family: "Playfair Display", serif;
             font-weight: 900;
+            margin: 0;
+            line-height: 1.1;
+          }
+          img {
+            max-width: 100%;
           }
         `}
       />
-      <header>header</header>
+      {/* <header>header</header> */}
       <main>{children}</main>
-      <footer>footer</footer>
+      {/* <footer>footer</footer> */}
     </>
   )
 }
