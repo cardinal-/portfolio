@@ -1,4 +1,11 @@
 module.exports = {
+  siteMetadata: {
+    title: "Matt Cardinal",
+    titleTemplate: "%s · Matt Cardinal",
+    description: "The design portfolio of Matt Cardinal UX designer.",
+    url: "https://www.mattcardinal.com", // No trailing slash allowed!
+    twitterUsername: "@matt_cardinal",
+  },
   plugins: [
     `gatsby-plugin-emotion`,
     "gatsby-plugin-react-helmet",

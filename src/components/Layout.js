@@ -1,17 +1,11 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
-import { Helmet } from "react-helmet"
+import SEO from "./SEO"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Rubik&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
-
+      <SEO />
       <Global
         styles={css`
           *,
