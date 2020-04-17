@@ -5,6 +5,8 @@ module.exports = {
     description: "The design portfolio of Matt Cardinal UX designer.",
     url: "https://www.mattcardinal.com", // No trailing slash allowed!
     twitterUsername: "@matt_cardinal",
+    keywords: "UX, designer, IBM, SCAD, portland, signal cycles,",
+    author: "Matt Cardinal",
   },
   plugins: [
     `gatsby-plugin-emotion`,

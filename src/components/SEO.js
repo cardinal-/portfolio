@@ -4,8 +4,25 @@ import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
 const SEO = ({ title, description, image, article }) => {
+  const data = useStaticQuery(graphql`
+    query GetSiteMetadata {
+      site {
+        siteMetadata {
+          description
+          title
+          author
+          keywords
+        }
+      }
+    }
+  `)
+  console.log(data)
   return (
     <Helmet>
+      <title>{data.site.siteMetadata.title}</title>
+      <meta name="description" content={data.site.siteMetadata.description} />
+      <meta name="keywords" content={data.site.siteMetadata.keywords} />
+      <meta name="author" content={data.site.siteMetadata.author} />
       <link
         href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Rubik&display=swap"
         rel="stylesheet"
