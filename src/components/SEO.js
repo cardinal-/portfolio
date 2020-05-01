@@ -16,17 +16,14 @@ const SEO = ({ title, description, image, article }) => {
       }
     }
   `)
-  console.log(data)
+
   return (
     <Helmet>
       <title>{data.site.siteMetadata.title}</title>
       <meta name="description" content={data.site.siteMetadata.description} />
       <meta name="keywords" content={data.site.siteMetadata.keywords} />
       <meta name="author" content={data.site.siteMetadata.author} />
-      <link
-        href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Rubik&display=swap"
-        rel="stylesheet"
-      />
+
       <link
         rel="apple-touch-icon"
         sizes="180x180"
