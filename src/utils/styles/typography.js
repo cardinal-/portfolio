@@ -1,4 +1,14 @@
 export const primaryFont = 'Rubik, sans-serif'
+export const displayFont = '"Bungee Hairline", sans-serif'
+
+/**
+ * 62.5% = 10px = 1rem
+ */
+export const defaultFontSize = '62.5%'
+export const copyLineHeight = '1.6'
+export const headingLineHeight = '1.1'
+
+export const headingFontWeight = '600'
 
 export const typeScaleSmall = {
   header1: '5.653rem',

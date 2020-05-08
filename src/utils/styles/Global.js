@@ -1,6 +1,8 @@
 import React from 'react'
 import { Global, css } from '@emotion/core'
 
+import * as typography from './typography'
+
 const GlobalStyles = () => {
   const styles = css`
     *,
@@ -12,23 +14,23 @@ const GlobalStyles = () => {
     }
     html {
       box-sizing: border-box;
-      font-size: 62.5%;
+      font-size: ${typography.defaultFontSize};
     }
     body {
       margin: 0;
-      line-height: 1.6;
-      font-family: 'Rubik', sans-serif;
+      line-height: ${typography.copyLineHeight};
+      font-family: ${typography.primaryFont};
     }
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
+      font-weight: ${typography.headingFontWeight};
       margin: 0;
-      line-height: 1.1;
+      line-height: ${typography.headingLineHeight};
     }
     img {
       max-width: 100%;

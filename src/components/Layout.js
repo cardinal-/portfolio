@@ -1,13 +1,15 @@
 import React from 'react'
 import SEO from './SEO'
+import Header from './Header/Header.js'
+import GlobalStyles from '../utils/styles'
 
 const Layout = ({ children }) => {
   return (
     <>
       <SEO />
-      {/* <header>header</header> */}
+      <GlobalStyles />
+      <Header />
       <main>{children}</main>
-      {/* <footer>footer</footer> */}
     </>
   )
 }
