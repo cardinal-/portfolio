@@ -1,10 +1,13 @@
 import React from 'react'
 import { Global, css } from '@emotion/core'
+import { normalize } from 'polished'
 
 import * as typography from './typography'
 
 const GlobalStyles = () => {
   const styles = css`
+    ${normalize()}
+
     *,
     *::before,
     *::after {
