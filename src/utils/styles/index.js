@@ -1,6 +1,7 @@
 import GlobalStyles from './Global.js'
+import colors from './colors'
+import * as typography from './typography'
 
-export * from './typography.js'
-export * from './colors.js'
+export { colors, typography }
 
 export default GlobalStyles

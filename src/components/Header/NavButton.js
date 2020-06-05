@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
 import { colors } from '../../utils/styles'
 
-const Button = styled.button`
+const Button = styled(motion.button)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,12 +13,14 @@ const Button = styled.button`
   outline: none;
   background: none;
   cursor: pointer;
+  z-index: 10;
 `
 
 const Line = styled(motion.div)`
   width: 2.4rem;
   height: 2px;
-  background-color: ${colors.secondaryDark};
+  background-color: ${({ open }) =>
+    open ? colors.primaryLight : colors.secondaryDark};
 `
 
 const NavButton = ({ isNavOpen, setIsNavOpen }) => {
@@ -33,24 +35,20 @@ const NavButton = ({ isNavOpen, setIsNavOpen }) => {
     }
   }
 
+  const topLineVariants = {
+    closed: { y: 0, rotate: 0 },
+    open: { y: 4, rotate: 45 },
+  }
+
+  const bottomLineVariants = {
+    closed: { y: 0, rotate: 0 },
+    open: { y: -4, rotate: -45 },
+  }
+
   return (
-    <Button onClick={toggleNav}>
-      <Line
-        initial={false}
-        animate={{
-          y: isNavOpen ? 4 : 0,
-          rotate: isNavOpen ? 45 : 0,
-        }}
-        transition={{ duration: 3 }}
-      />
-      <Line
-        initial={false}
-        animate={{
-          y: isNavOpen ? -4 : 0,
-          rotate: isNavOpen ? -45 : 0,
-        }}
-        transition={{ duration: 3 }}
-      />
+    <Button animate={isNavOpen ? 'open' : 'closed'} onClick={toggleNav}>
+      <Line open={isNavOpen} initial={false} variants={topLineVariants} />
+      <Line open={isNavOpen} initial={false} variants={bottomLineVariants} />
     </Button>
   )
 }
