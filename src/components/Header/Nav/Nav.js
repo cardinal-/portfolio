@@ -1,12 +1,15 @@
 import React from 'react'
 import { AnimatePresence } from 'framer-motion'
+import { Link } from 'gatsby'
 
 import {
   NavContainer,
   Title,
   Examples,
-  ProjectList,
-  ProjectItem,
+  NavList,
+  NavItem,
+  NavItemHeading,
+  LearnMore,
 } from './Nav.styles.js'
 
 const variants = {
@@ -28,24 +31,45 @@ const Nav = ({ isNavOpen }) => {
         >
           <Examples>
             <Title>Work examples</Title>
-            <ProjectList>
-              <ProjectItem>
-                <h4>Project 1</h4>
-                <p>
-                  A type line about the project. <br /> What does this look like
-                  with two lines?
-                </p>
-              </ProjectItem>
-              <ProjectItem>
-                <h4>Project 2</h4>
-                <p>A type line about the project</p>
-              </ProjectItem>
-              <ProjectItem>
-                <h4>Project 3</h4>
-                <p>A type line about the project</p>
-              </ProjectItem>
-            </ProjectList>
+            <NavList>
+              <NavItem>
+                <Link to="/projects/complex-ui-interface">
+                  <NavItemHeading>Complex UI interface</NavItemHeading>
+                  <p>
+                    Complex interfaces with a lot of metada <br /> How might we
+                    make the interface conform to the needs of the user?
+                  </p>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link to="/projects/ibm-projects">
+                  <NavItemHeading>IBM projects</NavItemHeading>
+                  <p>Enterprise design thinking for large complex problems</p>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link to="/projects/industrial-design">
+                  <NavItemHeading>Industrial design</NavItemHeading>
+                  <p>Hand and eye skills rendered in real touchable things</p>
+                </Link>
+              </NavItem>
+            </NavList>
           </Examples>
+          <LearnMore>
+            <Title>Learn More</Title>
+            <NavList>
+              <NavItem>
+                <Link to="/about">
+                  <NavItemHeading>About</NavItemHeading>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link to="/contact">
+                  <NavItemHeading>Get in Touch</NavItemHeading>
+                </Link>
+              </NavItem>
+            </NavList>
+          </LearnMore>
         </NavContainer>
       )}
     </AnimatePresence>

@@ -14,6 +14,9 @@ export const NavContainer = styled(motion.nav)`
   padding: 8rem 3rem;
 `
 
+/**
+ * General styles
+ */
 export const Title = styled(motion.h3)`
   font-size: 1.2rem;
   color: ${colors.primaryDark};
@@ -21,28 +24,40 @@ export const Title = styled(motion.h3)`
   font-weight: normal;
 `
 
-/**
- * Example section
- */
-export const Examples = styled(motion.section)``
-
-export const ProjectList = styled(motion.ul)`
+export const NavList = styled(motion.ul)`
   list-style-type: none;
 `
 
-export const ProjectItem = styled(motion.li)`
+export const NavItem = styled(motion.li)`
   margin-bottom: 2.4rem;
 
-  h4 {
-    font-size: 2.4rem;
-    color: ${colors.primaryLight};
-    line-height: ${typography.headingLineHeight};
-    margin-bottom: 0.8rem;
+  a:link,
+  a:visited {
+    text-decoration: none;
   }
 
   p {
     font-size: 1.2rem;
     color: ${colors.secondaryLight};
-    font-weight: 600;
+    font-weight: 500;
   }
 `
+
+export const NavItemHeading = styled.h4`
+  font-size: 2.4rem;
+  color: ${colors.primaryLight};
+  line-height: ${typography.headingLineHeight};
+  margin-bottom: 0.8rem;
+`
+
+/**
+ * Example section
+ */
+export const Examples = styled(motion.section)`
+  margin-bottom: 4.8rem;
+`
+
+/**
+ * Learn more section
+ */
+export const LearnMore = styled(motion.section)``
