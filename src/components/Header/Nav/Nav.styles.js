@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
-import { colors, typography } from '../../../utils/styles'
+import { colors, typography } from '../../../styles'
 
 // Container for navigation
 export const NavContainer = styled(motion.nav)`

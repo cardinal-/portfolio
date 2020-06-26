@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
-import { colors } from '../../utils/styles'
+import { colors } from '../../styles'
 
 const Button = styled(motion.button)`
   display: flex;

@@ -1,7 +1,7 @@
 import React from 'react'
 import SEO from './SEO'
 import Header from './Header/Header.js'
-import GlobalStyles from '../utils/styles'
+import GlobalStyles from '../styles'
 
 const Layout = ({ children }) => {
   return (
