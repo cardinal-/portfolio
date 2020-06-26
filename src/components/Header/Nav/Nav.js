@@ -3,6 +3,12 @@ import { AnimatePresence } from 'framer-motion'
 import { Link } from 'gatsby'
 
 import {
+  SocialMediaList,
+  SocialMediaListItem,
+  SocialMediaIcon,
+} from '../../SocialMediaList.js'
+
+import {
   NavContainer,
   Title,
   Examples,
@@ -12,6 +18,8 @@ import {
   LearnMore,
 } from './Nav.styles.js'
 
+import useSocialMediaLinks from '../../../hooks/useSocialMediaLinks'
+
 const variants = {
   container: {
     hidden: { y: '-100%', transition: { duration: 0.1 } },
@@ -20,6 +28,8 @@ const variants = {
 }
 
 const Nav = ({ isNavOpen }) => {
+  const socialLinks = useSocialMediaLinks()
+
   return (
     <AnimatePresence>
       {isNavOpen && (
@@ -70,6 +80,20 @@ const Nav = ({ isNavOpen }) => {
               </NavItem>
             </NavList>
           </LearnMore>
+
+          <SocialMediaList>
+            {socialLinks.map(item => (
+              <SocialMediaListItem>
+                <a href={item.url} target="_blank">
+                  <SocialMediaIcon
+                    type="image/svg+xml"
+                    data={item.svg}
+                    className="icon"
+                  />
+                </a>
+              </SocialMediaListItem>
+            ))}
+          </SocialMediaList>
         </NavContainer>
       )}
     </AnimatePresence>

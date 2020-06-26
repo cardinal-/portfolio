@@ -1,16 +1,37 @@
 module.exports = {
   siteMetadata: {
-    title: "Matt Cardinal",
-    titleTemplate: "%s · Matt Cardinal",
-    description: "The design portfolio of Matt Cardinal UX designer.",
-    url: "https://www.mattcardinal.com", // No trailing slash allowed!
-    twitterUsername: "@matt_cardinal",
-    keywords: "UX, designer, IBM, SCAD, portland, signal cycles,",
-    author: "Matt Cardinal",
+    title: 'Matt Cardinal',
+    titleTemplate: '%s · Matt Cardinal',
+    description: 'The design portfolio of Matt Cardinal UX designer.',
+    url: 'https://www.mattcardinal.com', // No trailing slash allowed!
+    keywords: 'UX, designer, IBM, SCAD, portland, signal cycles,',
+    author: 'Matt Cardinal',
+    socialMediaLinks: [
+      {
+        name: 'Dribbble',
+        svg: '/images/svg/dribbble-ball-mark.svg',
+        url: '#',
+      },
+      {
+        name: 'LinkedIn',
+        svg: '/images/svg/linked-in-icon.svg',
+        url: '#',
+      },
+      {
+        name: 'Twitter',
+        svg: '/images/svg/twitter-icon.svg',
+        url: '#',
+      },
+      {
+        name: 'Instagram',
+        svg: '/images/svg/instagram-icon.svg',
+        url: '#',
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-emotion`,
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -21,10 +42,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ["Playfair Display", "Rubik"],
+          families: ['Playfair Display', 'Rubik'],
         },
       },
     },
