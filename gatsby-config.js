@@ -33,6 +33,13 @@ module.exports = {
     `gatsby-plugin-emotion`,
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'projects',
+        path: `${__dirname}/src/projects/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],

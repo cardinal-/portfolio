@@ -23,7 +23,28 @@ import useSocialMediaLinks from '../../../hooks/useSocialMediaLinks'
 const variants = {
   container: {
     hidden: { y: '-100%', transition: { duration: 0.1 } },
-    visible: { y: 0, transition: { duration: 0.2 } },
+    visible: {
+      y: 0,
+      transition: { duration: 0.2 },
+    },
+  },
+  section: {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { delay: 0.2 } },
+  },
+  navList: {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.1, when: 'beforeChildren' },
+    },
+  },
+  navListItem: {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  },
+  socialMedia: {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { delay: 0.2 } },
   },
 }
 
@@ -39,10 +60,10 @@ const Nav = ({ isNavOpen }) => {
           animate="visible"
           exit="hidden"
         >
-          <Examples>
+          <Examples variants={variants.section}>
             <Title>Work examples</Title>
-            <NavList>
-              <NavItem>
+            <NavList variants={variants.navList}>
+              <NavItem variants={variants.navListItem}>
                 <Link to="/projects/complex-ui-interface">
                   <NavItemHeading>Complex UI interface</NavItemHeading>
                   <p>
@@ -51,13 +72,13 @@ const Nav = ({ isNavOpen }) => {
                   </p>
                 </Link>
               </NavItem>
-              <NavItem>
+              <NavItem variants={variants.navListItem}>
                 <Link to="/projects/ibm-projects">
                   <NavItemHeading>IBM projects</NavItemHeading>
                   <p>Enterprise design thinking for large complex problems</p>
                 </Link>
               </NavItem>
-              <NavItem>
+              <NavItem variants={variants.navListItem}>
                 <Link to="/projects/industrial-design">
                   <NavItemHeading>Industrial design</NavItemHeading>
                   <p>Hand and eye skills rendered in real touchable things</p>
@@ -65,15 +86,16 @@ const Nav = ({ isNavOpen }) => {
               </NavItem>
             </NavList>
           </Examples>
-          <LearnMore>
+
+          <LearnMore variants={variants.section}>
             <Title>Learn More</Title>
-            <NavList>
-              <NavItem>
+            <NavList variants={variants.navList}>
+              <NavItem variants={variants.navListItem}>
                 <Link to="/about">
                   <NavItemHeading>About</NavItemHeading>
                 </Link>
               </NavItem>
-              <NavItem>
+              <NavItem variants={variants.navListItem}>
                 <Link to="/contact">
                   <NavItemHeading>Get in Touch</NavItemHeading>
                 </Link>
@@ -81,7 +103,7 @@ const Nav = ({ isNavOpen }) => {
             </NavList>
           </LearnMore>
 
-          <SocialMediaList>
+          <SocialMediaList variants={variants.socialMedia}>
             {socialLinks.map(item => (
               <SocialMediaListItem>
                 <a href={item.url} target="_blank">

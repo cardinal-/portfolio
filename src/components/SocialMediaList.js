@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
+import { motion } from 'framer-motion'
 import { colors } from '../styles'
 
-export const SocialMediaList = styled.ul`
+export const SocialMediaList = styled(motion.ul)`
   list-style-type: none;
   display: flex;
   justify-content: center;
