@@ -1,32 +1,16 @@
 const { createFilePath } = require('gatsby-source-filesystem')
 const path = require('path')
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === 'Mdx') {
-    const value = createFilePath({ node, getNode })
-
-    createNodeField({
-      name: 'slug',
-      node,
-      value: `/projects${value}`,
-    })
-  }
-}
-
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const result = await graphql(`
-    query {
+    query GetProjectURL {
       allMdx {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
+        nodes {
+          id
+          frontmatter {
+            url
           }
         }
       }
@@ -38,13 +22,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Create project pages.
-  const projects = result.data.allMdx.edges
+  const projects = result.data.allMdx.nodes
 
   // you'll call `createPage` for each result
-  projects.forEach(({ node }, index) => {
+  projects.forEach((node, index) => {
     createPage({
       // This is the slug you created before
-      path: node.fields.slug,
+      path: node.frontmatter.url,
       // This component will wrap our MDX content
       component: path.resolve(`./src/templates/ProjectTemplate.js`),
       // You can use the values in this context in

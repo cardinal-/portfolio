@@ -5,4 +5,6 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 2rem 3rem;
+  position: fixed;
+  width: 100%;
 `

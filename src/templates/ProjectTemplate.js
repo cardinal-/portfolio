@@ -3,18 +3,21 @@ import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
-
+import ProjectContainer from '../components/Projects/ProjectContainer'
 import Layout from '../components/Layout'
 
-const shortcodes = { Link } // Provide common components here
+import BannerImage from '../components/Projects/BannerImage'
+
+const shortcodes = { Link, BannerImage } // Provide common components here
 
 export default function ProjectTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <h1>{mdx.frontmatter.title}</h1>
-      <MDXProvider components={shortcodes}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
-      </MDXProvider>
+      <ProjectContainer>
+        <MDXProvider components={shortcodes}>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+      </ProjectContainer>
     </Layout>
   )
 }
