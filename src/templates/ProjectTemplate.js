@@ -6,9 +6,21 @@ import { Link } from 'gatsby'
 import ProjectContainer from '../components/Projects/ProjectContainer'
 import Layout from '../components/Layout'
 
-import BannerImage from '../components/Projects/BannerImage'
+import {
+  BannerImage,
+  ProjectTitle,
+  ProjectOverview,
+  ProjectTag,
+} from '../components/Projects/'
 
-const shortcodes = { Link, BannerImage } // Provide common components here
+// Provide common components here
+const shortcodes = {
+  Link,
+  BannerImage,
+  ProjectTitle,
+  ProjectOverview,
+  ProjectTag,
+}
 
 export default function ProjectTemplate({ data: { mdx } }) {
   return (
