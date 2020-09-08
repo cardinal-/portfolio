@@ -4,7 +4,7 @@ export const displayFont = '"Bungee Hairline", sans-serif'
 /**
  * 62.5% = 10px = 1rem
  */
-export const defaultFontSize = '62.5%'
+export const defaultFontSize = '1.6rem'
 export const copyLineHeight = '1.6'
 export const headingLineHeight = '1.1'
 

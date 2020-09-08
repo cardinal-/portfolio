@@ -6,11 +6,13 @@ import { Link } from 'gatsby'
 import ProjectContainer from '../components/Projects/ProjectContainer'
 import Layout from '../components/Layout'
 
+import Blockquote from '../components/Blockquote'
 import {
   BannerImage,
   ProjectTitle,
   ProjectOverview,
   ProjectTag,
+  ProjectContent,
 } from '../components/Projects/'
 
 // Provide common components here
@@ -20,6 +22,8 @@ const shortcodes = {
   ProjectTitle,
   ProjectOverview,
   ProjectTag,
+  ProjectContent,
+  Blockquote,
 }
 
 export default function ProjectTemplate({ data: { mdx } }) {

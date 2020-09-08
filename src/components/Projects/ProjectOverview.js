@@ -7,6 +7,7 @@ const ProjectOverview = styled.p`
   font-size: 1.6rem;
   font-weight: 500;
   columns: 220px 2;
+  margin-bottom: 0;
 `
 
 export default ProjectOverview

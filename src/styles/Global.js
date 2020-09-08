@@ -3,6 +3,7 @@ import { Global, css } from '@emotion/core'
 import { normalize } from 'polished'
 
 import * as typography from './typography'
+import colors from './colors'
 
 const GlobalStyles = () => {
   const styles = css`
@@ -17,12 +18,14 @@ const GlobalStyles = () => {
     }
     html {
       box-sizing: border-box;
-      font-size: ${typography.defaultFontSize};
+      font-size: 62.5%;
     }
+
     body {
       margin: 0;
       line-height: ${typography.copyLineHeight};
       font-family: ${typography.primaryFont};
+      color: ${colors.secondaryDark};
     }
 
     h1,
@@ -37,6 +40,11 @@ const GlobalStyles = () => {
     }
     img {
       max-width: 100%;
+    }
+
+    p {
+      font-size: ${typography.defaultFontSize};
+      margin-bottom: 1.6rem;
     }
   `
 
