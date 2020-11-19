@@ -1,10 +1,16 @@
 import styled from '@emotion/styled'
 
 export const StyledHeader = styled.header`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5vw 1fr 5vw;
+  padding: 2rem 0;
+  position: fixed;
+`
+
+export const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 3rem;
-  position: fixed;
-  width: 100%;
-`
+  grid-column: 2 / 3;
+`;

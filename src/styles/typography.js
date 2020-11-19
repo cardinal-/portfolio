@@ -1,10 +1,10 @@
 export const primaryFont = 'Rubik, sans-serif'
-export const displayFont = '"Bungee Hairline", sans-serif'
+export const displayFont = "'Bungee Inline', sans-serif";
 
 /**
  * 62.5% = 10px = 1rem
  */
-export const defaultFontSize = '1.6rem'
+export const defaultFontSize = '1.4rem'
 export const copyLineHeight = '1.6'
 export const headingLineHeight = '1.1'
 

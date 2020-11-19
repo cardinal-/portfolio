@@ -108,8 +108,7 @@ const Nav = ({ isNavOpen }) => {
               <SocialMediaListItem>
                 <a href={item.url} target="_blank">
                   <SocialMediaIcon
-                    type="image/svg+xml"
-                    data={item.svg}
+                    src={item.svg}
                     className="icon"
                   />
                 </a>

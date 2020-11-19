@@ -10,22 +10,22 @@ module.exports = {
       {
         name: 'Dribbble',
         svg: '/images/svg/dribbble-ball-mark.svg',
-        url: '#',
+        url: 'https://dribbble.com/matt_cardinal',
       },
       {
         name: 'LinkedIn',
         svg: '/images/svg/linked-in-icon.svg',
-        url: '#',
+        url: 'https://www.linkedin.com/in/matt-cardinal-67454019',
       },
       {
         name: 'Twitter',
         svg: '/images/svg/twitter-icon.svg',
-        url: '#',
+        url: 'https://twitter.com/matt_cardinal',
       },
       {
         name: 'Instagram',
         svg: '/images/svg/instagram-icon.svg',
-        url: '#',
+        url: 'https://www.instagram.com/mattcardinal',
       },
     ],
   },

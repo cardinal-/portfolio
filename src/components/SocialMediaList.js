@@ -11,11 +11,14 @@ export const SocialMediaList = styled(motion.ul)`
 
 export const SocialMediaListItem = styled.li`
   a {
-    padding: 1.6rem;
+    display: inline-block;
+    padding: 1.1rem;
+    margin: 0 .3rem;
   }
 `
 
-export const SocialMediaIcon = styled.object`
+export const SocialMediaIcon = styled.img`
   /* fill: ${colors.secondaryColor}; */
-  width: 2rem;
+  width: 2rem; 
+  height: 2rem;
 `

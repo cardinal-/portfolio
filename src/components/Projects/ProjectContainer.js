@@ -1,12 +1,10 @@
 import styled from '@emotion/styled'
 import { mq } from '../../styles'
+import Grid from '../Grid';
 
 const containerMaxwidth = '104rem'
 
-const ProjectContainer = styled.article`
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 5vw 1fr 5vw;
+const ProjectContainer = styled(Grid)`
   grid-template-areas:
     'banner banner banner'
     '  .    content   .   ';
