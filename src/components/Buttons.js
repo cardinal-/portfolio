@@ -16,4 +16,5 @@ const Button = styled.button`
 
 export const PrimaryButton = styled(Button)`
   background: ${colors.secondaryDark};
+  margin-bottom: 5.4rem;
 `
