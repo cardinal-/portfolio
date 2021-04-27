@@ -12,7 +12,6 @@ export const SummaryImage = styled.div`
 `
 
 export const SummaryContent = styled.div`
-  width: 100%;
   grid-column: 1 / 3;
   margin-top: -3.8rem;
   background-color: ${colors.secondaryDark};
@@ -20,6 +19,12 @@ export const SummaryContent = styled.div`
   color: ${colors.primaryLight};
   padding: 3.2rem 5vw;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.8;
 `
 
+export const ProjectLink = styled.div`
+  width: 100%;
+  height: 9rem;
+  grid-column: 2 / 3;
+  margin-top: 5rem;
+`
