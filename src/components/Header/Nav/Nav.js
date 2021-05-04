@@ -107,10 +107,7 @@ const Nav = ({ isNavOpen }) => {
             {socialLinks.map(item => (
               <SocialMediaListItem>
                 <a href={item.url} target="_blank">
-                  <SocialMediaIcon
-                    src={item.svg}
-                    className="icon"
-                  />
+                  <SocialMediaIcon src={item.svg} className="icon" />
                 </a>
               </SocialMediaListItem>
             ))}

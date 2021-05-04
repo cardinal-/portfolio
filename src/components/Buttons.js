@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import {colors} from '../styles';
+import styled from '@emotion/styled'
+import { colors } from '../styles'
 
 const Button = styled.button`
   outline: none;
@@ -12,9 +12,16 @@ const Button = styled.button`
   font-weight: 500;
   cursor: pointer;
   line-height: 1.2;
-`;
+`
 
 export const PrimaryButton = styled(Button)`
   background: ${colors.secondaryDark};
   margin-bottom: 5.4rem;
 `
+export const ButtonLink = styled(Button)`
+  color: ${colors.secondaryColor};
+  padding-left: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+`
+

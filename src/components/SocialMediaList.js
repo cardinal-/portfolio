@@ -13,7 +13,7 @@ export const SocialMediaListItem = styled.li`
   a {
     display: inline-block;
     padding: 1.1rem;
-    margin: 0 .3rem;
+    margin: 0 0.3rem;
   }
 `
 

@@ -1,5 +1,5 @@
 export const primaryFont = 'Rubik, sans-serif'
-export const displayFont = "'Bungee Inline', sans-serif";
+export const displayFont = "'Bungee Inline', sans-serif"
 
 /**
  * 62.5% = 10px = 1rem

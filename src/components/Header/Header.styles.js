@@ -13,4 +13,4 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
   grid-column: 2 / 3;
-`;
+`

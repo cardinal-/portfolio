@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { mq } from '../../styles'
-import Grid from '../Grid';
+import Grid from '../Grid'
 
 const containerMaxwidth = '104rem'
 

@@ -3,7 +3,7 @@ import Logo from './Logo'
 import NavButton from './NavButton'
 import Nav from './Nav/Nav.js'
 import { StyledHeader, HeaderContent } from './Header.styles.js'
-import Grid from '../Grid';
+import Grid from '../Grid'
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
