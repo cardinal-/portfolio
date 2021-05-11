@@ -24,4 +24,6 @@ export const ButtonLink = styled(Button)`
   font-size: 1.6rem;
   font-weight: bold;
 `
-
+export const GhostButton = styled(Button)`
+  border: 1px solid currentColor;
+`

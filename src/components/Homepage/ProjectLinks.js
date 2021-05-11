@@ -82,6 +82,8 @@ const Subtitle = styled.p`
 const Meta = styled.div`
   font-size: 1.2rem;
   color: ${colors.secondaryColor};
+  margin-bottom: 1.8rem;
+
   span {
     margin-right: 4rem;
   }
