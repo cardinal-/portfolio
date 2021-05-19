@@ -25,10 +25,9 @@ const Content = styled.div`
 const ComingSoon = () => (
   <StyledComingSoon>
     <Content>
-      <Title>I'm working on it</Title>
+      <Title>I'm Matt Cardinal</Title>
       <SubHead>
-        It takes time to make a website, especially if you don't know how to
-        make a website.
+        I am a User Experience Designer working in Hybrid Cloud at IBM in Austin, Texas!
       </SubHead>
     </Content>
   </StyledComingSoon>
