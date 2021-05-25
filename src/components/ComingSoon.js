@@ -27,7 +27,7 @@ const ComingSoon = () => (
     <Content>
       <Title>I'm Matt Cardinal</Title>
       <SubHead>
-        I am a User Experience Designer working in Hybrid Cloud at IBM in Austin, Texas!
+        I am a User Experience Designer working in Hybrid Cloud at IBM in Austin, Texas.
       </SubHead>
     </Content>
   </StyledComingSoon>

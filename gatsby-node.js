@@ -27,6 +27,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // you'll call `createPage` for each result
   projects.forEach((node, index) => {
     createPage({
+      pathPrefix: '/',
       // This is the slug you created before
       path: node.frontmatter.url,
       // This component will wrap our MDX content

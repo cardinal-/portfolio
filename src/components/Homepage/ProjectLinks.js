@@ -6,25 +6,32 @@ import imagePlaceholder from '../../projects/complex-ui-interface/assets/Spotify
 
 const projects = [
   {
-    name: 'Project 1',
-    subtitle: 'This is where I describe the project a bit',
-    description: 'words about the project here that set a little context and give a perspective for setting up the viewer so that they can know what they are getting into',
-    tag: 'UX designer',
-    date: 2019,
+    name: 'ViewPoint',
+    subtitle: 'Educating sellers to create offerings using Design Thinking',
+    description: 'We were told to create 100 offerings that would each bring in 100 million dollars of revenue. Easy, right? ',
+    tag: 'UX design team lead',
+    date: 2018,
   },
   {
-    name: 'Project 2',
-    subtitle: 'This is where I describe the project a bit',
-    description: 'words about the project here that set a little context and give a perspective for setting up the viewer so that they can know what they are getting into',
-    tag: 'UX designer',
-    date: 2019,
+    name: 'COPLINK',
+    subtitle: 'Software for Police Officers',
+    description: 'Police Officers have a lot to keep track of. How might we help lower their cognitive load and help them see through the noise?',
+    tag: 'UX designer, Researcher',
+    date: 2017,
   },
   {
-    name: 'Project 3',
-    subtitle: 'This is where I describe the project a bit',
-    description: 'words about the project here that set a little context and give a perspective for setting up the viewer so that they can know what they are getting into',
-    tag: 'UX designer',
-    date: 2019,
+    name: 'Signal + Ziba',
+    subtitle: 'Designing the ultimate city bike',
+    description: 'My bicycle company Signal Cycles partnered with design firm Ziba to answer the question: "What is the ultimate city bike?"',
+    tag: 'Designer, Fabricator',
+    date: 2011,
+  },
+  {
+    name: 'Signal + Ziba',
+    subtitle: 'Designing the ultimate city bike',
+    description: 'My bicycle company Signal Cycles partnered with design firm Ziba to answer the question: "What is the ultimate city bike?"',
+    tag: 'Designer, Fabricator',
+    date: 2011,
   },
 ]
 
@@ -40,7 +47,7 @@ export const ProjectContainer = () => {
                 <Subtitle>{project.subtitle}</Subtitle>
                 <Meta>
                   <span>{project.tag}</span>
-                  <time datetime={`${project.date}-01-01`}>{project.date}</time>
+                  <time dateTime={`${project.date}-01-01`}>{project.date}</time>
                 </Meta>
                 <Details>
                   <p>{project.description}</p>

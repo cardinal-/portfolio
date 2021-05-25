@@ -3,7 +3,7 @@ import { colors } from '../../styles'
 
 export const IntroContainer = styled.section`
   grid-column: 2 / 3;
-  padding-top: 9.5rem;
+  padding-top: 2rem;
 `
 
 export const SubTitle = styled.h1`
