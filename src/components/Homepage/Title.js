@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { colors, typography } from '../../styles'
+import { colors, typography, mq } from '../../styles'
 
 const Title = styled.div`
   color: ${colors.primaryDark};
@@ -8,6 +8,10 @@ const Title = styled.div`
   line-height: 1.2;
   margin-bottom: 2.6rem;
   font-weight: normal;
+  
+  ${mq.smallDesktop} {
+    font-size: 6rem;
+  }
 `
 
 export default Title

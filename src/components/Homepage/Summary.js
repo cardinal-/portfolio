@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { colors } from '../../styles'
+import { colors, mq } from '../../styles'
 
 export const SummaryImage = styled.div`
   width: 100%;
@@ -20,4 +20,13 @@ export const SummaryContent = styled.div`
   padding: 3.2rem 5vw;
   font-weight: 500;
   line-height: 1.8;
+
+  p {
+    max-width: 63rem;
+    ${mq.tablet} {
+      columns: 220px 2;
+    }
+  }
+
+ 
 `
