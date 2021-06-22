@@ -4,6 +4,9 @@ import { colors, mq } from '../../styles'
 export const IntroContainer = styled.section`
   grid-column: 2 / 3;
   padding-top: 2rem;
+  ${mq.smallDesktop}{
+    grid-column: 2 / 4;
+  }
 `
 
 export const SubTitle = styled.h1`

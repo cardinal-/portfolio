@@ -9,6 +9,11 @@ export const SummaryImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  ${mq.smallDesktop}{
+    grid-column: 1 / 4;
+    height: 42.4rem;
+  }
 `
 
 export const SummaryContent = styled.div`
@@ -21,12 +26,14 @@ export const SummaryContent = styled.div`
   font-weight: 500;
   line-height: 1.8;
 
+  ${mq.smallDesktop}{
+    grid-column: 2 / 5;
+  }
+
   p {
     max-width: 63rem;
     ${mq.tablet} {
       columns: 220px 2;
     }
   }
-
- 
 `
