@@ -4,7 +4,7 @@ import { colors, mq } from '../../styles'
 export const SummaryImage = styled.div`
   width: 100%;
   height: 24rem;
-  grid-column: 2 / 4;
+  grid-column: 1 / 3;
   background-image: url('https://images.unsplash.com/photo-1490604001847-b712b0c2f967?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1380&q=80');
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,7 +17,7 @@ export const SummaryImage = styled.div`
 `
 
 export const SummaryContent = styled.div`
-  grid-column: 1 / 3;
+  grid-column: 2 / 4;
   margin-top: -3.8rem;
   background-color: ${colors.secondaryDark};
   font-size: 1.2rem;
@@ -27,7 +27,7 @@ export const SummaryContent = styled.div`
   line-height: 1.8;
 
   ${mq.smallDesktop}{
-    grid-column: 2 / 5;
+    grid-column: 3 / 5;
   }
 
   p {
