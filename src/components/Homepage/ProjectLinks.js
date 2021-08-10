@@ -28,11 +28,11 @@ const projects = [
     date: 2011,
   },
   {
-    name: 'Signal + Ziba',
-    subtitle: 'Designing the ultimate city bike',
-    description: 'My bicycle company Signal Cycles partnered with design firm Ziba to answer the question: "What is the ultimate city bike?"',
-    tag: 'Designer, Fabricator',
-    date: 2011,
+    name: 'Drawing & Illustration',
+    subtitle: 'A collection of visual artifacts from various projects',
+    description: 'I enjoy using visual artifacts to help communicate ideas. These examples are from some work related projects and some personal explorations.',
+    tag: 'Artist, Illustrator',
+    date: 2020,
   },
 ]
 
@@ -74,7 +74,7 @@ const Container = styled.div`
   ${mq.smallDesktop} {
     grid-column: 2 / 4;
   }
-`
+`;
 
 const Project = styled.article`
   margin-bottom: 5rem;

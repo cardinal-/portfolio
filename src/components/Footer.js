@@ -3,8 +3,13 @@ import styled from '@emotion/styled'
 import { colors, typography, mq } from '../styles'
 import { GhostButton, ButtonLink } from './Buttons'
 import lasso from '../assets/svg/lasso.svg';
+import useSocialMediaLinks from '../hooks/useSocialMediaLinks'
 
 const Footer = () => {
+  const socialLinks = useSocialMediaLinks()
+
+  console.log(socialLinks);
+
     return (
         <StyledFooter>
           <Container>
@@ -17,6 +22,11 @@ const Footer = () => {
               <a href="#">More about me</a>
               <img src={lasso} />
             </AboutMe>
+            <SocialList>
+              {socialLinks.map(social => (
+                <li><a href={social.url} target="_blank">{social.name}</a></li>
+              ))}
+            </SocialList>
           </Container>
         </StyledFooter>
     )
@@ -26,10 +36,14 @@ const StyledFooter = styled.footer`
   grid-column: span 3;
   background-color: #021018;
   padding: 5.5rem 5vw 5rem; 
+
+  ${mq.tablet} {
+    grid-column: span 5;
+  }
 `
 
 const Container = styled.div`
-  max-width: 43rem;
+  min-width: 43rem;
 `;
 
 export const Title = styled.h3`
@@ -44,7 +58,7 @@ export const Content = styled.p`
   color: ${colors.primaryDark};
   font-weight: bold;
   margin-bottom: 4rem;
-  max-width: 52rem;
+  max-width: 30rem;
 `
 
 const AboutMe = styled.div`
@@ -52,11 +66,46 @@ const AboutMe = styled.div`
   align-items: center;
   margin-top: 6rem;
 
+  ${mq.tablet} {
+    margin-top: 0;
+    display: inline-flex;
+    margin-left: 5rem;
+  }
+
   a {
     font-size: 1.4rem;
     color: ${colors.primaryColor};
     text-decoration: none;
     margin-right: 2.2rem;
+  }
+
+  
+`;
+
+const SocialList = styled.ul`
+  display: none;
+  list-style-type: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-left: auto;
+  margin-top: 9rem;
+
+  ${mq.tablet} {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  a {
+    color: ${colors.secondaryColor};
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 1.6rem;
+  }
+
+  li {
+    &:not(:last-child) {
+      border-right: 2px solid currentColor;
+    }
   }
 `;
 
