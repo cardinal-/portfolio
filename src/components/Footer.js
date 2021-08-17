@@ -2,32 +2,35 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { colors, typography, mq } from '../styles'
 import { GhostButton, ButtonLink } from './Buttons'
+import Grid, {Center} from './Grid';
 import lasso from '../assets/svg/lasso.svg';
 import useSocialMediaLinks from '../hooks/useSocialMediaLinks'
 
 const Footer = () => {
   const socialLinks = useSocialMediaLinks()
 
-  console.log(socialLinks);
-
     return (
         <StyledFooter>
-          <Container>
-            <Title>Want to connect?</Title>
-            <Content>
-              I’m always down for a conversation about design and technology or just to share opinions on the best ramen shops. Send an email and we can talk.
-            </Content>
-            <GhostButton>Get in touch </GhostButton>
-            <AboutMe>
-              <a href="#">More about me</a>
-              <img src={lasso} />
-            </AboutMe>
-            <SocialList>
-              {socialLinks.map(social => (
-                <li><a href={social.url} target="_blank">{social.name}</a></li>
-              ))}
-            </SocialList>
-          </Container>
+          <Grid marginTop="0px">
+            <Center>
+              <Container>
+                <Title>Want to connect?</Title>
+                <Content>
+                  I’m always down for a conversation about design and technology or just to share opinions on the best ramen shops. Send an email and we can talk.
+                </Content>
+                <GhostButton>Get in touch </GhostButton>
+                <AboutMe>
+                  <a href="#">More about me</a>
+                  <img src={lasso} />
+                </AboutMe>
+                <SocialList>
+                  {socialLinks.map(social => (
+                    <li><a href={social.url} target="_blank">{social.name}</a></li>
+                  ))}
+                </SocialList>
+              </Container>
+            </Center>
+          </Grid>
         </StyledFooter>
     )
 }
@@ -35,7 +38,10 @@ const Footer = () => {
 const StyledFooter = styled.footer`
   grid-column: span 3;
   background-color: #021018;
-  padding: 5.5rem 5vw 5rem; 
+  overflow: hidden;
+  padding: 5.5rem 0; 
+  width: 100%;
+  
 
   ${mq.tablet} {
     grid-column: span 5;

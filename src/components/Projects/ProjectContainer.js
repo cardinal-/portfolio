@@ -18,13 +18,11 @@ const ProjectContainer = styled(Grid)`
   }
 
   /* Breakpoints */
-  /* ${mq[0]} {
-    grid-template-columns: 1fr 1fr 1fr;
+  ${mq.smallDesktop} {
+    grid-template-areas:
+    'banner banner banner banner'
+    '  .  content  content   .   ';
   }
-
-  ${mq[1]} {
-    grid-template-columns: 1fr 1fr 1fr;
-  } */
 `
 
 export default ProjectContainer
